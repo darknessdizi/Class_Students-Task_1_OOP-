@@ -49,14 +49,6 @@ class Lecture(Mentor):
 class Reviewer(Mentor):
     pass 
 
-
-
-
-
-
-
-
-
 best_student = Student('Ruoy', 'Eman', 'your_gender')
 best_student.courses_in_progress += ['Python']
  
