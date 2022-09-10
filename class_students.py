@@ -15,12 +15,16 @@ class Student:
         self.grades = {}
 
     def add_courses(self, course_name):
+
+        '''Пока не ясно назначение этого метода.
+        Он не используется'''
+        
         self.finished_course.append(course_name)
  
  
 class Mentor:
 
-    '''Создает учитилей'''
+    '''Создает учителей'''
 
     def __init__(self, name, surname):
 
@@ -32,7 +36,14 @@ class Mentor:
         self.courses_attached = []
 
     def rate_hw(self, student, course, grade):
-        if isinstance(student, Student) and course in self.courses_attached and course in student.courses_in_progress:
+
+        '''Метод добавляет оценку студенту за пройденный курс при условии,
+что студент является объктом класса Student, пройденный курс закреплен за
+текущим учителем и данный курс входит в список курсов указанного студента'''
+        
+        if (isinstance(student, Student) and
+            course in self.courses_attached and
+            course in student.courses_in_progress):
             if course in student.grades:
                 student.grades[course] += [grade]
             else:
