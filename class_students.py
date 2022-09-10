@@ -12,15 +12,7 @@ class Student:
         self.gender = gender
         self.finished_courses = []
         self.courses_in_progress = []
-        self.grades = {}
-
-    def add_courses(self, course_name):
-
-        '''Пока не ясно назначение этого метода.
-        Он не используется'''
-        
-        self.finished_course.append(course_name)
- 
+        self.grades = {} 
  
 class Mentor:
 
@@ -50,16 +42,30 @@ class Mentor:
                 student.grades[course] = [grade]
         else:
             return 'Ошибка'
- 
+
+class Lecture(Mentor):
+    pass
+
+class Reviewer(Mentor):
+    pass 
+
+
+
+
+
+
+
+
+
 best_student = Student('Ruoy', 'Eman', 'your_gender')
 best_student.courses_in_progress += ['Python']
  
-cool_mentor = Mentor('Some', 'Buddy')
-cool_mentor.courses_attached += ['Python']
+cool_lector = Lecture('Some', 'Buddy')
+cool_lector.courses_attached += ['Python']
  
-cool_mentor.rate_hw(best_student, 'Python', 10)
-cool_mentor.rate_hw(best_student, 'Python', 10)
-cool_mentor.rate_hw(best_student, 'Python', 10)
+cool_lector.rate_hw(best_student, 'Python', 10)
+cool_lector.rate_hw(best_student, 'Python', 10)
+cool_lector.rate_hw(best_student, 'Python', 10)
  
 print(best_student.grades)
 
